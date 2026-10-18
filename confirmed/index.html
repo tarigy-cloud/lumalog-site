@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Email confirmed · LumaLog</title>
+<style>
+  /* LumaLog's sunset colours: light by default, dark when the phone is in dark mode */
+  :root {
+    --bg: #fbeee8; --card: #fff8f4; --text: #33211f; --muted: #8a6d68;
+    --accent: #e2604f; --good: #2b8a57; --bad: #d93a3f; --line: #ecd6cd;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1420; --card: #1a2030; --text: #f4ece9; --muted: #a9a3b0;
+      --accent: #f07a68; --good: #4fbf83; --bad: #f07a7f; --line: #2a3144;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right))
+             max(24px, env(safe-area-inset-bottom)) max(20px, env(safe-area-inset-left));
+  }
+  .card {
+    width: 100%;
+    max-width: 420px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+  .badge {
+    width: 72px; height: 72px; border-radius: 50%;
+    margin: 0 auto 22px;
+    display: grid; place-items: center;
+    color: #fff; font-size: 38px; font-weight: 700;
+    background: var(--good);
+  }
+  .badge.bad { background: var(--bad); }
+  h1 {
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, sans-serif;
+    font-size: 30px; line-height: 1.15; margin: 0 0 12px;
+  }
+  p { font-size: 17px; line-height: 1.5; color: var(--muted); margin: 0 0 10px; }
+  .app { color: var(--accent); font-weight: 700; }
+  .small { font-size: 14px; margin-top: 22px; }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+  <!-- Where the "Confirm your email" link sends people (Supabase's Site URL points here).
+       Supabase adds the result to the end of the address after a #:
+       - it worked: login details (#access_token=...). This page never uses them, and wipes them from the address bar
+       - it didn't: #error=...&error_code=otp_expired and so on (an old link, or one that was already used) -->
+
+  <main class="card" id="ok">
+    <div class="badge" aria-hidden="true">✓</div>
+    <h1>Email confirmed</h1>
+    <p>Your <span class="app">LumaLog</span> account is ready.</p>
+    <p>Go back to the app and sign in.</p>
+    <p class="small">You can close this page.</p>
+  </main>
+
+  <main class="card" id="failed" hidden>
+    <div class="badge bad" aria-hidden="true">!</div>
+    <h1>This link didn't work</h1>
+    <p>It may be old, or it was already used.</p>
+    <p>Try signing in to <span class="app">LumaLog</span>. If your email isn't confirmed yet, sign up again with the same email to get a new link.</p>
+    <p class="small">You can close this page.</p>
+  </main>
+
+  <script>
+    // Read what Supabase added after the #, then wipe it from the address bar
+    // (so login details are never left in the address, the history, or a copied link)
+    var details = new URLSearchParams(window.location.hash.slice(1));
+    if (window.location.hash) {
+      history.replaceState(null, '', window.location.pathname);
+    }
+
+    // Supabase says something went wrong: show the "didn't work" message instead
+    if (details.get('error') || details.get('error_code')) {
+      document.getElementById('ok').hidden = true;
+      document.getElementById('failed').hidden = false;
+    }
+  </script>
+</body>
+</html>
