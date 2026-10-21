@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LumaLog Privacy Policy</title>
+<meta name="robots" content="noindex">
+<style>
+/* Layout: one reading column; a "short version" card up top, then numbered sections (legal pages refer to them by number). LumaLog's sunset palette, iPhone fonts only (no font requests to Google). */
+:root {
+  --bg: #fbeee8; --card: #fff8f4; --fg: #33211f; --muted: #8a6d68; --line: #ecd6cd;
+  --accent: #c94c3c; --accent-soft: #f7d9cf; --good: #2b8a57; --on-good: #ffffff;
+  --font-display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1420; --card: #1a2030; --fg: #f4ece9; --muted: #a9a3b0; --line: #2a3144;
+    --accent: #f07a68; --accent-soft: #3a2328; --good: #4fbf83; --on-good: #0f1420; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1420; --card: #1a2030; --fg: #f4ece9; --muted: #a9a3b0; --line: #2a3144;
+  --accent: #f07a68; --accent-soft: #3a2328; --good: #4fbf83; --on-good: #0f1420; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { padding-block: 44px 4px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 7vw, 50px); line-height: 1.05; margin: 8px 0 12px; text-wrap: balance; }
+.dates { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin: 0; }
+.short { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.short h2 { font-size: 20px; margin: 0 0 12px; display: block; }
+.short ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.short li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; margin: 0; }
+.tick { width: 22px; height: 22px; border-radius: 50%; background: var(--good); color: var(--on-good); font-size: 13px; font-weight: 700; display: grid; place-items: center; margin-top: 3px; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 23px; line-height: 1.2; margin: 44px 0 10px; text-wrap: balance; display: flex; gap: 12px; align-items: baseline; }
+h2 .sec { font-family: var(--font-mono); font-size: 13px; color: var(--accent); font-weight: 500; }
+p, li { max-width: 66ch; }
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--card); margin-top: 10px; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 15px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+thead th { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+tbody tr:last-child td { border-bottom: 0; }
+.contact { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin-top: 10px; }
+.mail { font-family: var(--font-mono); font-size: 15px; user-select: all; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">LumaLog · Privacy Policy</div>
+    <h1>Your workouts are yours</h1>
+    <p class="dates">Last updated 21 October 2026</p>
+
+    <section class="short" aria-labelledby="short-title">
+      <h2 id="short-title">The short version</h2>
+      <ul>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>You don't need an account.</strong> Without one, your workouts stay on your phone and nothing about them is sent anywhere.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>With an account,</strong> we keep your email and your workouts so we can back them up and sync them between your devices. They're stored in Ireland.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>No ads, and we never sell your data.</strong> Anonymous usage statistics are collected only if you say yes.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>Delete everything any time</strong> in Settings → Delete account.</span></li>
+      </ul>
+    </section>
+  </header>
+
+  <h2><span class="sec">01</span>Who we are</h2>
+  <p>LumaLog is a workout app made by Tarig Bashari, an independent developer based in Ireland ("we", "us"). We decide how your data is used, which makes us its "data controller" under EU law. You can reach us at <span class="mail">tarigdevapps@gmail.com</span>.</p>
+
+  <h2><span class="sec">02</span>Using LumaLog without an account</h2>
+  <p>LumaLog works fully without an account. Everything you create (workouts, exercises, progression rules, set targets and the result of every set) is saved only on your phone, along with your settings. None of it is sent to us or to anyone else. If you delete the app, this data is deleted with it.</p>
+
+  <h2><span class="sec">03</span>What we keep if you create an account</h2>
+  <p>An account is optional. If you create one, we keep:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Information</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Email address</strong></td><td>To create your account, sign you in, and send account emails: confirming your address and password reset codes.</td></tr>
+        <tr><td><strong>Password</strong></td><td>To sign you in. It's stored in a scrambled (hashed) form by our account provider. Nobody, including us, can read it.</td></tr>
+        <tr><td><strong>Workout data</strong>: workouts, exercises, notes, progression rules, set targets, and the result, reps and weight of each logged set, with the times they were changed</td><td>To back up your workouts and keep them the same on every device you sign in on.</td></tr>
+        <tr><td><strong>Account ID</strong>: a random code</td><td>To link your workouts to your account.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We don't collect your location, contacts, photos, data from Apple Health, or advertising identifiers.</p>
+
+  <h2><span class="sec">04</span>Usage statistics, only if you allow them</h2>
+  <p>When you first open LumaLog, we ask whether you'd like to share anonymous usage statistics. They show us things like which screens are used and when a workout is finished, so we know what to improve.</p>
+  <ul>
+    <li>They're <strong>off unless you tap Allow</strong>. You can change your mind any time in Settings → Share anonymous usage data.</li>
+    <li>They contain only the name of what happened and simple numbers, never your email, your name or the contents of your workouts.</li>
+    <li>If you're signed in, they're linked to your random account ID, never your email.</li>
+    <li>They're processed by PostHog, in the EU.</li>
+  </ul>
+
+  <h2><span class="sec">05</span>Why we're allowed to use it</h2>
+  <ul>
+    <li><strong>To give you the service you asked for:</strong> your account, backup, sync and account emails.</li>
+    <li><strong>Your permission:</strong> usage statistics, and storing workout data that may say something about your health (see section 06). You can withdraw your permission any time.</li>
+    <li><strong>Our legitimate interest</strong> in keeping LumaLog secure and fixing problems you report.</li>
+  </ul>
+
+  <h2><span class="sec">06</span>Your workout data and your health</h2>
+  <p>Your workouts and notes can say something about your fitness or health. We use them only to back up and sync your workouts for you. We never analyse them, share them or sell them. By creating an account and choosing to sync, you're asking us to store them, and you can delete them any time. Please don't put medical details in your notes.</p>
+
+  <h2><span class="sec">07</span>Who else handles it</h2>
+  <p>We use a few service providers. They handle data only on our behalf and only to provide their service.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Provider</th><th>What for</th><th>Where</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Supabase</strong></td><td>Accounts and the online copy of your workouts</td><td>EU (Ireland)</td></tr>
+        <tr><td><strong>Google (Gmail)</strong></td><td>Sends account emails, so it receives your email address</td><td>May be outside the EU</td></tr>
+        <tr><td><strong>PostHog</strong></td><td>Usage statistics, only if you allow them</td><td>EU</td></tr>
+        <tr><td><strong>UserJot</strong></td><td>Our feedback board (Request a feature, Report a bug), only if you choose to post there. It has its own sign-in and its own <a href="https://userjot.com/privacy">privacy policy</a>.</td><td>United States, protected by the EU's standard contract terms</td></tr>
+        <tr><td><strong>GitHub</strong></td><td>Hosts this website, and sees visitors' IP addresses</td><td>United States</td></tr>
+        <tr><td><strong>Apple</strong></td><td>Distributes the app through the App Store, under Apple's own privacy policy</td><td>Worldwide</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>We may also share information if the law requires it.</p>
+
+  <h2><span class="sec">08</span>How we keep it safe</h2>
+  <ul>
+    <li>Data travels between the app and our servers over an encrypted connection.</li>
+    <li>Our database is set up so each account can only ever read and change its own workouts.</li>
+    <li>On your phone, your sign-in is stored encrypted, with its key in the iPhone's secure Keychain.</li>
+  </ul>
+  <p>No system is perfectly secure. If a breach affects your data, we'll tell you as the law requires.</p>
+
+  <h2><span class="sec">09</span>How long we keep it</h2>
+  <ul>
+    <li><strong>While you have an account,</strong> we keep your data so it stays backed up.</li>
+    <li><strong>Deleting a workout or exercise</strong> marks it as deleted, so the delete reaches your other devices. Its contents stay on our server until you delete your account.</li>
+    <li><strong>Deleting your account</strong> (Settings → Delete account) permanently deletes your account and all its workouts from our server straight away. Any copies in our provider's backups are removed when those backups expire.</li>
+    <li><strong>Signing out</strong> removes your workouts from that phone. They stay in your account and come back when you sign in again.</li>
+    <li><strong>Feedback board posts</strong> stay on UserJot until they're removed. Ask us and we'll remove yours.</li>
+  </ul>
+
+  <h2><span class="sec">10</span>Your rights</h2>
+  <p>You can ask us for a copy of your data, or to correct it, delete it or stop using it. You can also withdraw your permission any time. Delete your account yourself in the app, or email us for anything else, and we'll reply within one month. If you're not happy with how we handle your data, you can complain to Ireland's <a href="https://www.dataprotection.ie">Data Protection Commission</a>, or to the authority where you live.</p>
+
+  <h2><span class="sec">11</span>Age</h2>
+  <p>LumaLog is for people aged 16 or older. If you think someone younger has created an account, contact us and we'll delete it.</p>
+
+  <h2><span class="sec">12</span>Changes to this policy</h2>
+  <p>If we change this policy, we'll update the date at the top. If a change is significant, for example collecting a new kind of data, we'll tell you in the app before it takes effect.</p>
+
+  <h2><span class="sec">13</span>Contact us</h2>
+  <div class="contact">
+    <p>Questions or requests about your privacy: <span class="mail">tarigdevapps@gmail.com</span></p>
+  </div>
+
+  <footer>
+    <span>LumaLog Privacy Policy</span>
+    <a href="https://tarigy-cloud.github.io/lumalog-site/terms/">Terms of Use</a>
+  </footer>
+</main>
+
+</html>

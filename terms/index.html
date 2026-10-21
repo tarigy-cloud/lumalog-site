@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LumaLog Terms of Use</title>
+<meta name="robots" content="noindex">
+<style>
+/* Layout: one reading column; a "short version" card up top, then numbered sections (legal pages refer to them by number). LumaLog's sunset palette, iPhone fonts only (no font requests to Google). */
+:root {
+  --bg: #fbeee8; --card: #fff8f4; --fg: #33211f; --muted: #8a6d68; --line: #ecd6cd;
+  --accent: #c94c3c; --accent-soft: #f7d9cf; --good: #2b8a57; --on-good: #ffffff; --warn: #b5481f;
+  --font-display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1420; --card: #1a2030; --fg: #f4ece9; --muted: #a9a3b0; --line: #2a3144;
+    --accent: #f07a68; --accent-soft: #3a2328; --good: #4fbf83; --on-good: #0f1420; --warn: #f5b83d; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1420; --card: #1a2030; --fg: #f4ece9; --muted: #a9a3b0; --line: #2a3144;
+  --accent: #f07a68; --accent-soft: #3a2328; --good: #4fbf83; --on-good: #0f1420; --warn: #f5b83d; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { padding-block: 44px 4px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 7vw, 50px); line-height: 1.05; margin: 8px 0 12px; text-wrap: balance; }
+.dates { font-family: var(--font-mono); font-size: 13px; color: var(--muted); margin: 0; }
+.short { margin-top: 24px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 18px 20px; }
+.short h2 { font-size: 20px; margin: 0 0 12px; display: block; }
+.short ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.short li { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; margin: 0; }
+.tick { width: 22px; height: 22px; border-radius: 50%; background: var(--good); color: var(--on-good); font-size: 13px; font-weight: 700; display: grid; place-items: center; margin-top: 3px; }
+.tick.warn { background: var(--warn); }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 23px; line-height: 1.2; margin: 44px 0 10px; text-wrap: balance; display: flex; gap: 12px; align-items: baseline; }
+h2 .sec { font-family: var(--font-mono); font-size: 13px; color: var(--accent); font-weight: 500; }
+p, li { max-width: 66ch; }
+ul { padding-left: 1.2em; }
+li { margin: 6px 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+.notice { background: var(--accent-soft); border-radius: 14px; padding: 4px 16px; }
+.contact { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px; margin-top: 10px; }
+.mail { font-family: var(--font-mono); font-size: 15px; user-select: all; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+</style>
+
+<main>
+  <header>
+    <div class="eyebrow">LumaLog · Terms of Use</div>
+    <h1>The deal, in plain English</h1>
+    <p class="dates">Last updated 21 October 2026</p>
+
+    <section class="short" aria-labelledby="short-title">
+      <h2 id="short-title">The short version</h2>
+      <ul>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>LumaLog is free to use,</strong> with or without an account.</span></li>
+        <li><span class="tick warn" aria-hidden="true">!</span><span><strong>It isn't medical advice.</strong> You choose what to lift, and you train at your own risk.</span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>You need to be 16 or older.</strong></span></li>
+        <li><span class="tick" aria-hidden="true">✓</span><span><strong>Your workouts belong to you.</strong> Delete them any time.</span></li>
+      </ul>
+    </section>
+  </header>
+
+  <h2><span class="sec">01</span>About these terms</h2>
+  <p>These terms are an agreement between you and Tarig Bashari, the independent developer in Ireland who makes LumaLog ("we", "us"). By using LumaLog or creating an account, you agree to them. How we handle your data is explained in our <a href="https://tarigy-cloud.github.io/lumalog-site/privacy/">Privacy Policy</a>.</p>
+
+  <h2><span class="sec">02</span>Who can use LumaLog</h2>
+  <p>You must be 16 or older to use LumaLog.</p>
+
+  <h2><span class="sec">03</span>LumaLog isn't medical advice</h2>
+  <div class="notice">
+    <p>LumaLog helps you log workouts, and works out your next targets from the rules <em>you</em> set. Those targets are calculations, not medical, fitness or professional advice. They don't take your health, injuries or ability into account.</p>
+  </div>
+  <ul>
+    <li>Check with a doctor before starting a new training programme, especially if you have a health condition or an injury.</li>
+    <li>Only lift weights you can handle safely, with good form. Stop if you feel pain, dizziness or anything that doesn't feel right.</li>
+    <li>You decide what to do in every session, and you train at your own risk.</li>
+  </ul>
+
+  <h2><span class="sec">04</span>Your account</h2>
+  <ul>
+    <li>An account is optional. If you create one, use an email address you can access and keep your password to yourself.</li>
+    <li>You're responsible for what happens in your account.</li>
+    <li>You can delete your account any time in Settings → Delete account.</li>
+  </ul>
+
+  <h2><span class="sec">05</span>Your workouts</h2>
+  <p>Your workouts belong to you. If you have an account, you let us store and copy them only to run LumaLog for you: backing them up and syncing them between your devices.</p>
+
+  <h2><span class="sec">06</span>Using LumaLog fairly</h2>
+  <p>Please don't:</p>
+  <ul>
+    <li>try to reach other people's data, get around LumaLog's security, or overload or disrupt our servers;</li>
+    <li>copy or take apart LumaLog's server side, or use LumaLog for anything illegal;</li>
+    <li>post spam, abuse or other people's personal details on our feedback board.</li>
+  </ul>
+
+  <h2><span class="sec">07</span>Feedback</h2>
+  <p>We love ideas and bug reports. If you send us one, we may use it to improve LumaLog without paying or owing you anything. Our feedback board is run by UserJot, so its own terms also apply when you post there.</p>
+
+  <h2><span class="sec">08</span>Changes to LumaLog</h2>
+  <p>LumaLog is free today. We may add paid features later, but we'll never charge you without you choosing to buy something. We may also change, pause or stop parts of LumaLog. If we ever stop syncing, we'll give you reasonable notice, and the workouts on your phone stay there.</p>
+
+  <h2><span class="sec">09</span>No guarantees</h2>
+  <p>We work hard to make LumaLog reliable, but it's provided "as is". We can't promise it will always be available, free of bugs, or that data will never be lost.</p>
+
+  <h2><span class="sec">10</span>Limits on our responsibility</h2>
+  <p>As far as the law allows, we aren't responsible for injuries from your training, for lost data, or for indirect losses that come from using LumaLog. Nothing in these terms limits responsibility that the law doesn't allow to be limited, such as for death or personal injury caused by our negligence, or takes away your rights as a consumer.</p>
+
+  <h2><span class="sec">11</span>Apple and the App Store</h2>
+  <p>If you downloaded LumaLog from the App Store, these terms are between you and us, not Apple. Apple isn't responsible for LumaLog or its support. Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard End User License Agreement</a> also applies, and Apple can enforce these terms as a third party.</p>
+
+  <h2><span class="sec">12</span>Ending this agreement</h2>
+  <p>You can stop using LumaLog and delete your account at any time. We may suspend or close an account that breaks these terms.</p>
+
+  <h2><span class="sec">13</span>The law that applies</h2>
+  <p>These terms are governed by Irish law. If you live elsewhere in the EU, you keep the protections of your own country's consumer law and can bring a claim in your local courts.</p>
+
+  <h2><span class="sec">14</span>Changes to these terms</h2>
+  <p>If we change these terms, we'll update the date at the top. If a change is significant, we'll tell you in the app before it takes effect.</p>
+
+  <h2><span class="sec">15</span>Contact us</h2>
+  <div class="contact">
+    <p>Questions about these terms: <span class="mail">tarigdevapps@gmail.com</span></p>
+  </div>
+
+  <footer>
+    <span>LumaLog Terms of Use</span>
+    <a href="https://tarigy-cloud.github.io/lumalog-site/privacy/">Privacy Policy</a>
+  </footer>
+</main>
+
+</html>
