@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>LumaLog Support</title>
+<style>
+/* Layout: one reading column; a contact card and two feedback links up top, then short answers to common questions. LumaLog's sunset palette, iPhone fonts only (no font requests to Google). */
+:root {
+  --bg: #fbeee8; --card: #fff8f4; --fg: #33211f; --muted: #8a6d68; --line: #ecd6cd;
+  --accent: #c94c3c; --accent-soft: #f7d9cf;
+  --font-display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: light;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e0e10; --card: #1c1c1e; --fg: #f4ece9; --muted: #a9a3b0; --line: #2c2c2e;
+    --accent: #f07a68; --accent-soft: #3a2328; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 72px;
+}
+main { max-width: 720px; margin: 0 auto; }
+header { padding-block: 44px 4px; }
+.eyebrow { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(34px, 7vw, 50px); line-height: 1.05; margin: 8px 0 12px; text-wrap: balance; }
+.lead { color: var(--muted); margin: 0; max-width: 60ch; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: 23px; line-height: 1.2; margin: 44px 0 12px; text-wrap: balance; }
+h3 { font-family: var(--font-display); font-size: 18px; margin: 0 0 4px; }
+p { max-width: 66ch; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.contact { margin-top: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
+.contact p { margin: 0 0 6px; }
+.mail { font-family: var(--font-mono); font-size: 17px; font-weight: 500; user-select: all; word-break: break-all; }
+.small { font-size: 15px; color: var(--muted); }
+.links { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 12px; }
+.link-card { display: block; text-decoration: none; color: var(--fg); background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+.link-card strong { color: var(--accent); font-family: var(--font-display); font-size: 18px; }
+.link-card span { display: block; color: var(--muted); font-size: 15px; margin-top: 2px; }
+.faq { display: grid; gap: 12px; }
+.faq div { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; }
+.faq p { margin: 0; color: var(--fg); }
+.path { font-weight: 600; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">LumaLog · Support</div>
+    <h1>Need a hand?</h1>
+    <p class="lead">LumaLog is made by one person, so you'll be talking to the developer directly.</p>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <h3 id="contact-title">Email me</h3>
+      <p class="mail">tarigdevapps@gmail.com</p>
+      <p class="small">Tell me what happened and which iPhone you use. I'll get back to you as soon as I can.</p>
+    </section>
+  </header>
+
+  <h2>Ideas and bugs</h2>
+  <div class="links">
+    <a class="link-card" href="https://lumalog.userjot.com/board/features">
+      <strong>Request a feature</strong>
+      <span>Suggest an idea, or vote for someone else's.</span>
+    </a>
+    <a class="link-card" href="https://lumalog.userjot.com/board/bugs">
+      <strong>Report a bug</strong>
+      <span>Something not working? Let me know.</span>
+    </a>
+  </div>
+  <p class="small">You can also open both from the app: <span class="path">Settings → Support</span>.</p>
+
+  <h2>Quick answers</h2>
+  <div class="faq">
+    <div>
+      <h3>Do I need an account?</h3>
+      <p>No. LumaLog works fully without one, and your workouts stay on your phone. An account backs them up and syncs them between your devices.</p>
+    </div>
+    <div>
+      <h3>My confirmation or reset email hasn't arrived</h3>
+      <p>Check your spam or junk folder. If it's there, marking it as "not spam" helps future emails arrive normally.</p>
+    </div>
+    <div>
+      <h3>I forgot my password</h3>
+      <p>On the sign-in screen, tap <span class="path">Forgot password?</span>. You'll get a code by email to set a new one.</p>
+    </div>
+    <div>
+      <h3>My workouts aren't showing on my other device</h3>
+      <p>Sign in with the same account on both devices and make sure you're online. LumaLog syncs when you open the app and after you finish a workout.</p>
+    </div>
+    <div>
+      <h3>How do I delete my account?</h3>
+      <p>In the app, go to <span class="path">Settings → Delete account</span>. This permanently deletes your account and the workouts stored with it.</p>
+    </div>
+  </div>
+
+  <footer>
+    <span>LumaLog Support</span>
+    <a href="https://tarigy-cloud.github.io/lumalog-site/privacy/">Privacy Policy</a>
+    <a href="https://tarigy-cloud.github.io/lumalog-site/terms/">Terms of Use</a>
+  </footer>
+</main>
+</body>
+</html>
